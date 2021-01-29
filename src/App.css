@@ -1,38 +1,656 @@
-.App {
+#root {
+  height: 100%;
+}
+.logo_div {
+  height: 32px;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 32px;
+  /* background: rgba(255, 255, 255, 0.3); */
+  width: 100%;
+  text-align: center;
+}
+.site-layout-background {
+  background: #fff !important;
+}
+
+.green_btn {
+  background: green !important;
+  border: green !important;
+  color: #fff !important;
+}
+
+/* sidebar css */
+
+.ant-menu-sub.ant-menu-inline > .ant-menu-item,
+.ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 35px !important;
+  line-height: 35px !important;
+}
+.sidebar_item {
+  position: relative;
+}
+
+.sidebar_item .add_new {
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed .logo_div {
+  justify-content: center;
+}
+.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed .logo {
+  display: none;
+}
+.ant-layout-sider .ant-divider {
+  margin: 3px 0 !important;
+  color: #fff !important;
+  border-color: #ccc !important;
+  font-weight: bold !important;
+}
+
+/* css for table */
+
+.table_div {
+  position: relative;
+}
+
+.add_row {
+  position: absolute !important;
+  bottom: 20px;
+  left: 55px;
+  z-index: 1;
+}
+
+.editable-cell {
+  position: relative;
+}
+
+th.ant-table-cell {
+  background: #001529 !important;
+  color: #fff !important;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+[data-theme='dark'] .editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #434343;
+}
+
+/* drawer css */
+
+.ant-drawer-close,
+.ant-drawer-title {
+  color: White !important;
+}
+
+.ant-form label {
+  font-weight: bold;
+  width: 150px;
+  white-space: break-spaces;
+  text-align: left;
+}
+/* User Profile Page */
+.ant-input:focus.UserProfileTag,
+.ant-input-focused.UserProfileTag {
+  box-shadow: none;
+}
+input.ant-input.UserProfileTag,
+input.ant-input.ant-input-disabled.UserProfileTag {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-size: larger;
+}
+input.ant-input.UserProfileTag {
+  border-bottom: 1px solid #000;
+  border-width: 2px;
+  border-color: #e5e5e5;
+}
+.UserProfileTag.ant-select-disabled.ant-select:not(.ant-select-customize-input)
+  .ant-select-selector,
+.UserProfileTag.ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border: none;
+  background: #fff;
+  color: #000;
+  font-size: larger;
+}
+.UserProfileTag.ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border-bottom: 1px solid #000;
+  border-width: 2px;
+  border-color: #e5e5e5;
+}
+.UserProfileTag.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  box-shadow: none;
+}
+
+.Add_field {
+  margin-bottom: 20px;
+}
+
+/* User Profile Page for every section */
+
+.ant-input:focus.UserProfileTagSection,
+.ant-input-focused.UserProfileTagSection {
+  box-shadow: none;
+}
+input.ant-input.UserProfileTagSection,
+input.ant-input.ant-input-disabled.UserProfileTagSection {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-size: 17px;
+}
+input.ant-input.UserProfileTagSection {
+  border-bottom: 1px solid #000;
+  border-width: 2px;
+  border-color: #e5e5e5;
+  width: 1400px;
+}
+
+.ant-input:focus.UserProfileTagSectionSmall,
+.ant-input-focused.UserProfileTagSectionSmall {
+  box-shadow: none;
+}
+input.ant-input.UserProfileTagSectionSmall,
+input.ant-input.ant-input-disabled.UserProfileTagSectionSmall {
+  background-color: #fff;
+  border: none;
+  color: rgb(168, 165, 165);
+  font-size: 15px;
+}
+input.ant-input.UserProfileTagSectionSmall {
+  border-bottom: 1px solid #000;
+  border-width: 2px;
+  border-color: #e5e5e5;
+}
+
+/* Dashboard */
+
+.site-card-border-less-wrapper {
+  padding: 30px;
+  background: #ececec;
+}
+.gutter-row {
+  padding: 0px 0px 20px 0px;
+}
+
+.contact-conn {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-radius {
+  border-radius: 200;
+}
+
+/* ContactList */
+
+.demo-infinite-container {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 8px 24px;
+  height: 300px;
+}
+.demo-loading-container {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* WeekTask */
+
+.demo-infinite-container-weektask {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 8px 24px;
+  height: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Start Forget.css */
+
+.card-login-vp-forget {
+  text-align: center;
+  padding-left: 15px;
+  width: 750px;
+  padding-right: 15px;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.login-form-password {
+}
+.login-card-form-forget {
+  width: max-content;
+  text-align: center;
+}
+.ak-logo-forget {
+  width: 50px;
+}
+.login-form {
+  text-align: center;
+}
+.top-row-height-forget {
+  height: 5vw;
+}
+.row-middle-pad {
+  height: 10vw;
+}
+.bottom-row-height {
+  height: 18vw;
+}
+.bottomtt-row-height-forget {
+  height: 10vw;
+}
+.login-form-button-forget {
+  width: 90%;
+}
+.login-title-form-forget {
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.bg-img-full {
+  background-image: url(https://akounterhr.com/static/images/login_background.png) !important;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 100px) and (max-width: 1024px) {
+  .block-mobile-tablet-hidden {
+    display: none !important;
+  }
+
+  .bottomtt-row-height-forget {
+    height: 0px;
+  }
+
+  .top-row-height-forget {
+    height: 0px;
+  }
+
+  .login-card-form-forget {
+    width: 400px;
+    height: 800px;
+    text-align: center;
+  }
+  .login-form-button-forget {
+    width: 250px;
+    height: 50px;
+  }
+  .p-bottom-text-forget {
+    font-size: 18px;
+  }
+  .field-rj-forget {
+    height: 60px;
+  }
+  .login-title-form-forget {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .ak-logo-forget {
+    width: 90px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
 }
 
-.App-link {
-  color: #61dafb;
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* CSS */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* End forget css */
+
+/* Start Login css */
+
+.card-login-vp-login {
+  text-align: center;
+  padding-left: 15px;
+  width: 750px;
+  padding-right: 15px;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.login-form-password {
+}
+.login-card-form-login {
+  width: 300px;
+  text-align: center;
+}
+.icon-main-login {
+}
+.login-form {
+  text-align: center;
+}
+.top-row-height-login {
+  height: 5vw;
+}
+.row-middle-pad {
+  height: 10vw;
+}
+.bottom-row-height {
+  height: 18vw;
+}
+.bottomtt-row-height-login {
+  height: 10vw;
+}
+.login-form-button-login {
+  width: 90%;
+}
+
+.ak-logo-login {
+  width: 50px;
+}
+.bg-img-full {
+  background-image: url(https://akounterhr.com/static/images/login_background.png) !important;
+}
+
+.login-title-form-login {
+  font-size: 20px;
+  font-weight: 450;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 100px) and (max-width: 1024px) {
+  .block-mobile-tablet-hidden {
+    display: none !important;
   }
-  to {
-    transform: rotate(360deg);
+  .bottomtt-row-height-login {
+    height: 0px;
+  }
+
+  .top-row-height-login {
+    height: 0px;
+  }
+
+  .login-card-form-login {
+    width: 400px;
+    height: 800px;
+    text-align: center;
+  }
+  .login-form-button-login {
+    width: 250px;
+    height: 50px;
+  }
+  .p-bottom-text-login {
+    font-size: 18px;
+  }
+  .field-rj-login {
+    height: 60px;
+  }
+  .login-title-form-login {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .ak-logo-login {
+    width: 90px;
   }
 }
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* CSS */
+}
+
+/* End login css */
+
+/* Start Register css */
+
+.card-login-vp-register {
+  text-align: center;
+  padding-left: 15px;
+  width: 750px;
+  padding-right: 15px;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.login-form-password {
+}
+.login-card-form-register {
+  width: 25vw;
+  text-align: center;
+}
+.ak-logo-register {
+  width: 50px;
+}
+.login-form {
+  text-align: center;
+}
+
+.row-middle-pad {
+  height: 10vw;
+}
+.bottom-row-height-register {
+  height: 30vw;
+}
+.bottomtt-row-height-register {
+  height: 5vw;
+}
+.login-form-button-register {
+  width: 90%;
+}
+
+.login-title-form-register {
+  font-size: 20px;
+  font-weight: 450;
+}
+.bg-img-full {
+  background-image: url(https://akounterhr.com/static/images/login_background.png) !important;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 100px) and (max-width: 1024px) {
+  .block-mobile-tablet-hidden {
+    display: none !important;
+  }
+
+  .bottomtt-row-height-register {
+    height: 0px;
+  }
+
+  .bottomtt-row-height {
+    height: 0px;
+  }
+  .login-card-form-register {
+    width: 400px;
+    text-align: center;
+  }
+  .login-form-button-register {
+    width: 250px;
+    height: 50px;
+  }
+  .p-bottom-text-register {
+    font-size: 18px;
+  }
+  .field-rj-register {
+    height: 60px;
+  }
+  .login-title-form-register {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .ak-logo-register {
+    width: 90px;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* CSS */
+}
+
+/* End Register css */
+
+/* Start User Search table */
+
+/* End user Search table */
